@@ -9,16 +9,17 @@
 </head>
 
 <body>
+  <div class="main-screen" onclick="toggleMenu()"></div>
   <header class="main-header ">
 
     <div class="header-content main-layout flex space-between align-center">
 
       <div class="logo">Blogin<span class="logo-dot">.</span></div>
 
-      <ul class="clean-list flex align-center">
+      <ul class="clean-list flex align-center main-nav">
 
         <a>
-          <li class="nav-bar-item first-li">Journal</li>
+          <li class="nav-bar-item first-li ">Journal</li>
         </a>
         <a>
           <li class="nav-bar-item">About</li>
@@ -30,6 +31,7 @@
           <li class="nav-bar-item">Contact</li>
         </a>
       </ul>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
     </div>
   </header>
 
@@ -67,26 +69,32 @@
         <button class="card-btn">Continue Reading </button>
       </div>
     </div>
-    <div class="buttons-pages">
-      <button>PREVIOUS</button>
-      <button>NEXT</button>
+    <div class="buttons-pages flex space-between">
+      <a href="#">PREVIOUS</a>
+      <a href="#">NEXT</a>
     </div>
   </main>
-  <footer class="main-footer">
-    <div class="footer-container main-layout">
-      <div class="logo black">Blogin <span class="logo-dot">.</span></div>
+  <footer class="main-footer ">
+    <div class="footer-container main-layout flex column">
+      <div class="logo black ">Blogin<span class="logo-dot">.</span></div>
       <p>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at Pixelhint.com</p>
-      <button class="foot-btn">f</button>
-      <button class="foot-btn">t</button>
-      <button class="foot-btn">B</button>
-      <button class="foot-btn">b</button>
+      <div class="social-buttons flex ">
+        <button class="foot-btn">f</button>
+        <button class="foot-btn">t</button>
+        <button class="foot-btn">B</button>
+        <button class="foot-btn">b</button>
+      </div>
     </div>
   </footer>
 
 
 
 
-
+  <script>
+    function toggleMenu() {
+      document.body.classList.toggle('open-menu');
+    }
+  </script>
 
 </body>
 
