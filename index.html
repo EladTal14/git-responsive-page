@@ -44,7 +44,10 @@
           sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
 
         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
-        <button class="card-btn">Continue Reading </button>
+        <!-- <button class="card-btn">Continue Reading </button> -->
+        <div class="btn"><button class="card-btn" onmouseout="whenMouseOutButton('1')"
+            onmouseover="whenMouseOnButton('1')">Continue Reading <img class="arrows-right " src="img/arrow-right.png"
+              hidden></button></div>
       </div>
     </div>
     <div class="card">
@@ -70,8 +73,9 @@
       </div>
     </div>
     <div class="buttons-pages flex space-between">
-      <a href="#">PREVIOUS</a>
-      <a href="#">NEXT</a>
+      <a href="#" class="prev"><img class="arrows-right " src="img/arrow-left.png" /> PREVIOUS </a>
+
+      <a href="#" class="next">NEXT <img class="arrows-right " src="img/arrow-right.png" /></a>
     </div>
   </main>
   <footer class="main-footer ">
@@ -79,10 +83,10 @@
       <div class="logo black ">Blogin<span class="logo-dot">.</span></div>
       <p>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at Pixelhint.com</p>
       <div class="social-buttons flex ">
-        <button class="foot-btn">f</button>
-        <button class="foot-btn">t</button>
-        <button class="foot-btn">B</button>
-        <button class="foot-btn">b</button>
+        <button class="foot-btn fc-btn"><img src="img/facebook.png" alt=""></button>
+        <button class="foot-btn tw-btn"><img src="/img/twitter.png" alt=""></button>
+        <button class="foot-btn be-btn"><img src="img/Be.png" alt=""></button>
+        <button class="foot-btn bs-btn"><img src="img/basketBall.png" alt=""></button>
       </div>
     </div>
   </footer>
@@ -93,6 +97,19 @@
   <script>
     function toggleMenu() {
       document.body.classList.toggle('open-menu');
+    }
+
+    function whenMouseOnButton(idx) {
+      var elRightArrows = document.querySelectorAll('.arrows-right');
+      var elArrow = elRightArrows[(+idx - 1)];
+      elArrow.style.backgroundColor = '#58c93a'
+      elArrow.hidden = false;
+    }
+
+    function whenMouseOutButton(idx) {
+      var elRightArrows = document.querySelectorAll('.arrows-right');
+      var elArrow = elRightArrows[(+idx - 1)];
+      elArrow.hidden = true;
     }
   </script>
 

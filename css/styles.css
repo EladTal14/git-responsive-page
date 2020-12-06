@@ -44,7 +44,7 @@ a{
   text-shadow: 0 1px 0 #1e1e1e;
   text-decoration: none;
 }
-img{
+ .card img{
   width: 100%;
 }
 
@@ -131,9 +131,19 @@ a:hover{
 .buttons-pages a{
   color: #818181 ;
   font-size: 18px;
-
 }
-  
+.prev{
+  color: #818181;
+  font-size: 1.125rem;
+  text-shadow: none;
+  margin-left: 54px;
+}
+.next{
+  color: #818181;
+  font-size: 1.125rem;
+  text-shadow: none;
+  margin-right: 54px;
+}
 /* FOOTER */
 .main-footer{
   background-color: #f8f8f8;
@@ -150,6 +160,7 @@ a:hover{
 .footer-container p{
   margin-bottom: 38px;
 }
+
 .social-buttons{
   justify-content: space-between;
   width: 220px;
@@ -160,8 +171,24 @@ a:hover{
   width: 40px;
   height: 40px;
   cursor: pointer;
-}
 
+}
+.social-buttons button img{
+  line-height: 40px;
+  text-align: center;
+}
+.fc-btn:hover{
+  background-color:blue;
+}
+.tw-btn:hover{
+  background-color:rgb(155, 155, 240);
+}
+.be-btn:hover{
+  background-color:rgb(197, 91, 197);
+}
+.bs-btn:hover{
+  background-color:rgb(61, 228, 83);
+}
 /* SCREENS */
 .main-screen {
   position: fixed;
@@ -226,7 +253,7 @@ body.open-menu .main-screen {
     padding: 1.125rem 0;
 
 }
-img {
+.card img {
   margin-bottom: 30px;
 }
 } 
@@ -242,7 +269,7 @@ img {
     display: flex;
     justify-content: space-between;
   }
-  img{
+  .card img{
     width: 44%;
     object-fit: cover;
     margin-right:25px;
@@ -262,7 +289,7 @@ img {
   .main-layout{
     max-width: 980px;
   }
-  img{
+  .card img{
     width: 48%;
     object-fit: cover;
   }
