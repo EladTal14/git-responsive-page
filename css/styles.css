@@ -1,0 +1,161 @@
+*{
+  box-sizing: border-box;
+}
+/* FONTS */
+@font-face{
+  font-family: Lato;
+  src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+@font-face{
+  font-family: Eurofurenceregular;
+  src: url(../fonts/Eurofurenceregular/eurof55.ttf);
+}
+
+/*BASE  */
+html{
+  font-family: Lato,serif;
+  color: #606060;
+}
+body {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h2{
+  font-size: 1.75rem;
+  line-height: 1.875rem;
+  letter-spacing: 0.84px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+p{
+  line-height: 1.25rem;
+  letter-spacing: 0.48px;
+}
+
+a{
+  color: #ffffff;
+  letter-spacing: 0.8px;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 0 1px 0 #1e1e1e;
+  text-decoration: none;
+}
+img{
+  width: 100%;
+}
+
+/* LAYOUT */
+
+.main-layout{
+  max-width: 400px;
+  margin: 0 auto;
+}
+.main-header{
+  background-color: #292929;
+  box-shadow: inset 0 -6px 0 #1e1e1e;
+}
+.logo{
+  font-family: Eurofurenceregular;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: left;
+  font-weight: 400;
+}
+.logo-dot{
+  color: #58c93a;
+  font-family: Eurofurenceregular;
+  font-size: 2.5rem;
+  letter-spacing: -0.8px;
+  
+}
+.clean-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+}
+.nav-bar-item{
+  height: 130px;
+  width: 132px;
+  text-align: center;
+  line-height: 130px;
+  /* border-left: 1px solid black; */
+  cursor: pointer;
+}
+a .nav-bar-item{
+  border-right: 1px solid black;
+}
+a li.nav-bar-item.first-li{
+  border-left: 1px solid black;
+}
+.nav-bar-item:hover{
+  border-bottom: 6px solid #58c93a;
+}
+a:hover{
+  color:#58c93a ;
+}
+/* MAIN */
+
+.main-content{
+  border-right: 1px solid #e1e0e0;
+  border-left: 1px solid #e1e0e0;
+  border-bottom: 1px solid #e1e0e0; 
+}
+.card{
+  margin-bottom: 80px;
+}
+.card:first-of-type{
+  margin-top: 80px;
+}
+.card-btn{
+  align-self: flex-end;
+  border: 2px solid #c2c2c2;
+  background-color: #ffffff;
+  border-radius: 28px;
+  padding: 8px 16px;
+  font-weight: 700;
+  color: #c2c1c1;
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+
+
+
+
+
+/* HELPERS */
+.flex{
+  display: flex;
+}
+.space-between{
+  justify-content: space-between;
+}
+.column{
+  flex-direction: column;
+}
+.align-center{
+  align-items: center;
+}
+
+@media(min-width:763px){
+  .main-layout{
+    max-width: 750px;
+  }
+  .card{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  img{
+    width: 44%;
+    object-fit: cover;
+  }
+  .card .card-info{
+    width: 52%;
+    margin-right:10px;
+  }
+
+}
